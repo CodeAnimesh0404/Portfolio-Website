@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Portfolio - Creative Developer & Designer</title>
+        <title>Portfolio - Animesh Acharya</title>
         <meta name="description" content="Professional portfolio showcasing creative development and design work" />
       </Helmet>
       
