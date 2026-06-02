@@ -8,19 +8,19 @@ import ProjectCard from '@/components/ProjectCard.jsx';
 const PortfolioPage = () => {
   const projects = [
     {
-      image: 'https://images.unsplash.com/photo-1578401057158-0e58789f5947',
+      image: 'https://www.news-medical.net/image-handler/picture/2021/11/shutterstock_1668552160.jpg',
       title: 'COVID-19 Classification',
       description: 'Created a model to classify and predict COVID-19 cases based on various input features.',
       tags: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
     },
     {
-      image: 'https://images.unsplash.com/photo-1680016661694-1cd3faf31c3a',
+      image: 'https://sdbi.in/wp-content/uploads/2023/05/Tata-IP-2023-Machine-learning-Predictive-Analysis.png',
       title: 'IPL Win Prediction',
       description: 'A project aimed at predicting the outcomes of IPL matches using machine learning techniques.',
       tags: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
     },
     {
-      image: 'https://images.unsplash.com/photo-1609921212029-bb5a28e60960',
+      image: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Sentiment Analysis',
       description: 'Developed a sentiment analysis application that classifies sentiments from textual data using machine learning.',
       tags: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
@@ -31,7 +31,7 @@ const PortfolioPage = () => {
     <>
       <Helmet>
         <title>Portfolio - My Work</title>
-        <meta name="description" content="Explore my portfolio of web development and design projects" />
+        <meta name="description" content="Explore my portfolio of data science and machine learning projects" />
       </Helmet>
       
       <div className="min-h-screen flex flex-col">
@@ -50,7 +50,7 @@ const PortfolioPage = () => {
                   <span className="text-balance">Selected work</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-12 max-w-prose">
-                  A collection of projects that showcase my approach to solving design and development challenges.
+                  A collection of projects that showcase my skills and experience in data science and machine learning. Each project highlights my ability to apply data-driven solutions to real-world problems.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
