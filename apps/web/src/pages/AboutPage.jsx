@@ -74,7 +74,7 @@ const AboutPage = () => {
                   <div className="relative">
                     <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                       <img 
-                        src="https://images.unsplash.com/photo-1536785533700-934dd2b2b6fc" 
+                        src="/profile.jpg" 
                         alt="Professional headshot"
                         className="w-full h-full object-cover"
                       />
