@@ -12,7 +12,7 @@ const HomePage = () => {
     <>
       <Helmet>
         <title>Portfolio - Animesh Acharya</title>
-        <meta name="description" content="Professional portfolio showcasing creative development and design work" />
+        <meta name="description" content="Professional portfolio showcasing my information and my work in data science and machine learning." />
       </Helmet>
       
       <div className="min-h-screen flex flex-col">
