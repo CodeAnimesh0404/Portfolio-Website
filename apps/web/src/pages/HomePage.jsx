@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Code, Palette, Zap } from 'lucide-react';
+import { ArrowRight, BarChart2, TrendingUp, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
@@ -79,7 +79,7 @@ const HomePage = () => {
                     className="flex flex-col items-start"
                   >
                     <div className="p-3 rounded-xl bg-primary/10 mb-4">
-                      <Code className="w-6 h-6 text-primary" />
+                      <BarChart2 className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-semibold text-foreground mb-2">Data Science</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
@@ -95,7 +95,7 @@ const HomePage = () => {
                     className="flex flex-col items-start"
                   >
                     <div className="p-3 rounded-xl bg-accent/10 mb-4">
-                      <Palette className="w-6 h-6 text-accent" />
+                      <TrendingUp className="w-6 h-6 text-accent" />
                     </div>
                     <h3 className="text-lg font-semibold text-foreground mb-2">Analytics</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">

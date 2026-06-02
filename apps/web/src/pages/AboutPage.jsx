@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Code2, Palette, Lightbulb, Users, Rocket, Target } from 'lucide-react';
+import { BarChart2, Cpu, TrendingUp, PieChart, MessageCircle, Lightbulb, Users, Rocket, Target } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import SkillBadge from '@/components/SkillBadge.jsx';
@@ -9,12 +9,12 @@ import ExperienceItem from '@/components/ExperienceItem.jsx';
 
 const AboutPage = () => {
   const skills = [
-    { name: 'Data Science', icon: Code2 },
-    { name: 'Machine Learning', icon: Code2 },
-    { name: 'Analytics', icon: Palette },
-    { name: 'Data Visualization', icon: Palette },
-    { name: 'Natural Language Processing', icon: Code2 },
-    { name: 'Statistical Analysis', icon: Palette },
+    { name: 'Data Science', icon: BarChart2 },
+    { name: 'Machine Learning', icon: Cpu },
+    { name: 'Analytics', icon: TrendingUp },
+    { name: 'Data Visualization', icon: PieChart },
+    { name: 'Natural Language Processing', icon: MessageCircle },
+    { name: 'Statistical Analysis', icon: TrendingUp },
     { name: 'Strategic Planning', icon: Lightbulb },
     { name: 'Team Leadership', icon: Users },
   ];
