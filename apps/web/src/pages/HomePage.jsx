@@ -6,8 +6,30 @@ import { ArrowRight, BarChart2, TrendingUp, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
+import ProjectCard from '@/components/ProjectCard.jsx';
 
 const HomePage = () => {
+  const projects = [
+    {
+      image: 'https://www.news-medical.net/image-handler/picture/2021/11/shutterstock_1668552160.jpg',
+      title: 'COVID-19 Classification',
+      description: 'Created a model to classify and predict COVID-19 cases based on various input features.',
+      tags: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
+    },
+    {
+      image: 'https://sdbi.in/wp-content/uploads/2023/05/Tata-IP-2023-Machine-learning-Predictive-Analysis.png',
+      title: 'IPL Win Prediction',
+      description: 'A project aimed at predicting the outcomes of IPL matches using machine learning techniques.',
+      tags: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      title: 'Sentiment Analysis',
+      description: 'Developed a sentiment analysis application that classifies sentiments from textual data using machine learning.',
+      tags: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
+    },
+  ];
+
   return (
     <>
       <Helmet>
@@ -125,6 +147,38 @@ const HomePage = () => {
                       Thoughtful planning and execution to ensure projects meet business goals.
                     </p>
                   </motion.div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          <section className="py-20 bg-background">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="max-w-6xl mx-auto"
+              >
+                <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between mb-10">
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.3em] text-primary">Recent Technical Projects</p>
+                    <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-foreground leading-tight">
+                      Three recent projects that showcase my technical skills.
+                    </h2>
+                  </div>
+                  <Link to="/portfolio">
+                    <Button variant="outline" size="lg">
+                      View all projects
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+                  {projects.map((project, index) => (
+                    <ProjectCard key={project.title} project={project} index={index} />
+                  ))}
                 </div>
               </motion.div>
             </div>
