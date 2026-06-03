@@ -118,7 +118,7 @@ const ContactPage = () => {
                   <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight" style={{letterSpacing: '-0.02em'}}>
                     <span className="text-balance">Let's work together</span>
                   </h1>
-                  <p className="text-lg text-muted-foreground leading-relaxed max-w-prose">
+                  <p className="text-lg text-foreground/80 leading-relaxed max-w-prose">
                     Have a project in mind or want to discuss collaboration opportunities? I'd love to hear from you.
                   </p>
                 </motion.div>
@@ -140,7 +140,7 @@ const ContactPage = () => {
                             value={formData.name}
                             onChange={handleChange}
                             placeholder="Your name"
-                            className="text-foreground placeholder:text-muted-foreground"
+                          className="text-slate-50 placeholder:text-slate-400 dark:text-slate-50 dark:placeholder:text-slate-400"
                           />
                           {errors.name && (
                             <p className="text-sm text-destructive">{errors.name}</p>
@@ -156,7 +156,7 @@ const ContactPage = () => {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="your.email@example.com"
-                            className="text-foreground placeholder:text-muted-foreground"
+                            className="text-slate-50 placeholder:text-slate-400 dark:text-slate-50 dark:placeholder:text-slate-400"
                           />
                           {errors.email && (
                             <p className="text-sm text-destructive">{errors.email}</p>
@@ -172,7 +172,7 @@ const ContactPage = () => {
                           value={formData.subject}
                           onChange={handleChange}
                           placeholder="What's this about?"
-                          className="text-foreground placeholder:text-muted-foreground"
+                          className="text-slate-50 placeholder:text-slate-400 dark:text-slate-50 dark:placeholder:text-slate-400"
                         />
                         {errors.subject && (
                           <p className="text-sm text-destructive">{errors.subject}</p>
@@ -188,7 +188,7 @@ const ContactPage = () => {
                           onChange={handleChange}
                           placeholder="Tell me about your project..."
                           rows={6}
-                          className="text-foreground placeholder:text-muted-foreground resize-none"
+                          className="text-slate-50 placeholder:text-slate-400 dark:text-slate-50 dark:placeholder:text-slate-400 resize-none"
                         />
                         {errors.message && (
                           <p className="text-sm text-destructive">{errors.message}</p>
@@ -221,7 +221,7 @@ const ContactPage = () => {
                           </div>
                           <div>
                             <p className="text-sm font-medium text-foreground">Email</p>
-                            <p className="text-sm text-muted-foreground">acharyaanimesh00@gmail.com</p>
+                            <p className="text-sm text-foreground/70">acharyaanimesh00@gmail.com</p>
                           </div>
                         </div>
 
@@ -231,7 +231,7 @@ const ContactPage = () => {
                           </div>
                           <div>
                             <p className="text-sm font-medium text-foreground">Phone</p>
-                            <p className="text-sm text-muted-foreground">+9779841386152</p>
+                            <p className="text-sm text-foreground/70">+9779841386152</p>
                           </div>
                         </div>
 
@@ -241,7 +241,7 @@ const ContactPage = () => {
                           </div>
                           <div>
                             <p className="text-sm font-medium text-foreground">Location</p>
-                            <p className="text-sm text-muted-foreground">Kathmandu, Nepal</p>
+                            <p className="text-sm text-foreground/70">Kathmandu, Nepal</p>
                           </div>
                         </div>
                       </div>

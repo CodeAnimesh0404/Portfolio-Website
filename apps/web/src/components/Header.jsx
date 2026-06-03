@@ -41,8 +41,7 @@ const Header = () => {
             <span className="text-xl font-bold text-foreground">Animesh Acharya</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -56,61 +55,65 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={toggleTheme}
-              aria-label="Toggle light and dark mode"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </Button>
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="hidden md:flex items-center">
+            <div className="flex items-center border-l border-border pl-3 ml-3">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={toggleTheme}
+                aria-label="Toggle light and dark mode"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              </Button>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 md:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                  aria-expanded={isOpen}
+                >
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-64">
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                <SheetDescription className="sr-only">Navigate to different pages of the portfolio</SheetDescription>
+                <nav className="flex flex-col space-y-2 mt-8">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      onClick={() => setIsOpen(false)}
+                      className={`px-4 py-3 text-sm font-medium rounded-md transition-all duration-200 ${
+                        isActive(link.path)
+                          ? 'text-primary bg-muted'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
               aria-label="Toggle light and dark mode"
-              className="md:hidden text-muted-foreground hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground"
             >
               {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
-
-          {/* Mobile Navigation */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button
-                variant="ghost"
-                size="icon"
-                aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
-                aria-expanded={isOpen}
-              >
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-64">
-              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              <SheetDescription className="sr-only">Navigate to different pages of the portfolio</SheetDescription>
-              <nav className="flex flex-col space-y-2 mt-8">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    onClick={() => setIsOpen(false)}
-                    className={`px-4 py-3 text-sm font-medium rounded-md transition-all duration-200 ${
-                      isActive(link.path)
-                        ? 'text-primary bg-muted'
-                        : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+          </div>
         </div>
       </div>
     </header>
