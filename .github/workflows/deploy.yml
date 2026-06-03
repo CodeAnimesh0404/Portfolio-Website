@@ -27,14 +27,16 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: apps/web
 
       - name: Build
         run: npm run build
+        working-directory: apps/web
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./apps/web/dist
 
   deploy:
     environment:
