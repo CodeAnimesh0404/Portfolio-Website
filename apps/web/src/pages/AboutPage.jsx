@@ -73,11 +73,23 @@ const AboutPage = () => {
                 >
                   <div className="relative">
                     <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
-                      <img 
-                        src="/profile.jpg" 
-                        alt="Professional headshot"
-                        className="w-full h-full object-cover"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          srcSet="/profile-1024.webp 1024w, /profile-640.webp 640w, /profile-320.webp 320w"
+                          sizes="(max-width: 768px) 320px, 640px"
+                        />
+                        <img
+                          src="/profile.jpg"
+                          alt="Professional headshot"
+                          className="w-full h-full object-cover"
+                          width="1024"
+                          height="1024"
+                          loading="eager"
+                          decoding="async"
+                          fetchPriority="high"
+                        />
+                      </picture>
                     </div>
                     <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-2xl -z-10" />
                   </div>

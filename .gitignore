@@ -1,1 +1,7 @@
 node_modules
+
+# Temporary audit/output files
+/tmp_lighthouse2/
+lighthouse-report.report.html
+lighthouse-report.report.json
+
