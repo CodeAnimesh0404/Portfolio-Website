@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 
 const Header = () => {
   const location = useLocation();
@@ -56,6 +56,8 @@ const Header = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-64">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <SheetDescription className="sr-only">Navigate to different pages of the portfolio</SheetDescription>
               <nav className="flex flex-col space-y-2 mt-8">
                 {navLinks.map((link) => (
                   <Link
